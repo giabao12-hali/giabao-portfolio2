@@ -2,26 +2,26 @@ import { Icons } from "@/components/icons";
 import { HomeIcon } from "lucide-react";
 
 export const DATA = {
-  name: "GiaBao ",
+  name: "GiaBao",
   initials: "DV",
   url: "https://dillion.io",
-  location: "San Francisco, CA",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
+  location: "Ho Chi Minh City, Vietnam",
+  locationLink: "https://maps.app.goo.gl/B74bgAcgCRVFgJDH8",
   description:
-    "Web Developer. I really enjoy exploring technologies and listening to all the sounds of life.",
+    "Fullstack Web Developer. I really enjoy exploring technologies and listening to all the sounds of life.",
   summary:
     "After completing my thesis defense in December 2023 with a project on event ticket sales and graduating in May 2024, I spent a significant amount of time researching modern web technologies. During this period, I also participated in several activities and connected with experienced developers in the field to learn new things in programming.",
   avatarUrl: "/me.jpg",
   skills: [
     "C#",
     "ASP.NET",
-    "ABP Framework",
+    // "ABP Framework",
     "React",
     "Next.js",
-    "Angular",
+    // "Angular",
     "Typescript",
-    "Postgres",
-    "MS SQL",
+    "PostgreSQL",
+    "MS SQL Server",
     "Docker",
   ],
   navbar: [
@@ -79,9 +79,9 @@ export const DATA = {
       href: "https://www.vietravel.com/",
       badges: [],
       location: "At Company",
-      title: "Web Developer",
+      title: "Fullstack Web Developer",
       logoUrl: "/vietravel_logo.png",
-      start: "September 2024",
+      start: "July 2024",
       end: "Present",
       description:
         "Using React/Next.js to design UX/UI based on design principles and optimize SEO for new websites. Collaborating with other departments to maintain and develop the company's system using .NET technology. Utilizing Docker to optimize services. Building an admin website with the ABP Framework and Angular. Developing APIs to support the migration and modernization of the website.",
@@ -91,7 +91,7 @@ export const DATA = {
       badges: [],
       href: "https://hqsoft.com.vn/",
       location: "At Company",
-      title: "Web Developer",
+      title: "Backend Web Developer",
       logoUrl: "/hqsoft.png",
       start: "March 2024",
       end: "May 2024",
@@ -103,7 +103,7 @@ export const DATA = {
       href: "https://caodang.fpt.edu.vn/",
       badges: [],
       location: "At Company",
-      title: "Front-end Developer",
+      title: "Frontend Web Developer",
       logoUrl: "/fpt.png",
       start: "September 2023",
       end: "March 2024",
@@ -124,11 +124,11 @@ export const DATA = {
   projects: [
     {
       title: "Vietravel Plus",
-      href: "https://uat.vietravelplus.com",
+      href: "https://vietravelplus.com",
       dates: "Dec 2024 - Present (Maintaince)",
       active: true,
       description:
-        "After being assigned by the leader to revamp the [Vietravel Plus](https://uat.vietravelplus.com) website—with exciting features and attractive benefits for registered members—I collaborated with the designer to build the Client-side while following the leader's guidance to implement the Server-side of the website.",
+        "After being assigned by the leader to revamp the [Vietravel Plus](https://vietravelplus.com) website—with exciting features and attractive benefits for registered members—I collaborated with the designer to build the Client-side while following the leader's guidance to implement the Server-side of the website.",
       technologies: [
         "C#",
         "ASP.NET",
@@ -136,7 +136,7 @@ export const DATA = {
         "Next.js",
         "Angular",
         "Typescript",
-        "MS SQL",
+        "MS SQL Server",
         "TailwindCSS",
         "Bootstrap 5",
         "Shadcn UI",
@@ -144,7 +144,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://uat.vietravelplus.com",
+          href: "https://vietravelplus.com",
           icon: <Icons.globe className="size-3" />,
         },
       ],
