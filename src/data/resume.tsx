@@ -19,10 +19,11 @@ export const DATA = {
     "React",
     "Next.js",
     // "Angular",
-    "Typescript",
+    "TypeScript",
     "PostgreSQL",
     "MS SQL Server",
     "Docker",
+    "n8n"
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -52,7 +53,7 @@ export const DATA = {
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/b%E1%BA%A3o-nguy%E1%BB%85n-4989a4305/",
+        url: "https://www.linkedin.com/in/b%E1%BA%A3o-nguy%E1%BB%85n-4989a4305",
         icon: Icons.linkedin,
 
         navbar: true,
@@ -76,20 +77,20 @@ export const DATA = {
   work: [
     {
       company: "Vietravel",
-      href: "https://www.vietravel.com/",
+      href: "https://www.vietravel.com",
       badges: [],
       location: "At Company",
       title: "Fullstack Web Developer",
       logoUrl: "/vietravel_logo.png",
-      start: "July 2024",
+      start: "September 2024",
       end: "Present",
       description:
-        "Using React/Next.js to design UX/UI based on design principles and optimize SEO for new websites. Collaborating with other departments to maintain and develop the company's system using .NET technology. Utilizing Docker to optimize services. Building an admin website with the ABP Framework and Angular. Developing APIs to support the migration and modernization of the website.",
+        "In my role, I work with React and Next.js to design user-focused interfaces while ensuring SEO optimization for newly developed websites. I collaborate with cross-functional teams to maintain and extend the company’s systems built on .NET, and utilize Docker to streamline service deployment and performance. Alongside core development tasks, I also support internal tooling efforts, including building and maintaining an admin dashboard using Angular and the ABP Framework. Additionally, I contribute to backend development by building APIs that facilitate system migration and modernization.",
     },
     {
       company: "HQSOFT - Distribution & Retail Expert",
       badges: [],
-      href: "https://hqsoft.com.vn/",
+      href: "https://hqsoft.com.vn",
       location: "At Company",
       title: "Backend Web Developer",
       logoUrl: "/hqsoft.png",
@@ -100,7 +101,7 @@ export const DATA = {
     },
     {
       company: "FPT Polytechnic",
-      href: "https://caodang.fpt.edu.vn/",
+      href: "https://caodang.fpt.edu.vn",
       badges: [],
       location: "At Company",
       title: "Frontend Web Developer",
@@ -113,8 +114,16 @@ export const DATA = {
   ],
   education: [
     {
+      school: "University of Information Technology - UIT",
+      href: "https://www.uit.edu.vn",
+      degree: "Good",
+      logoUrl: "/uit.png",
+      start: "2025",
+      end: "Present",
+    },
+    {
       school: "FPT Polytechnic",
-      href: "https://caodang.fpt.edu.vn/",
+      href: "https://caodang.fpt.edu.vn",
       degree: "Good",
       logoUrl: "/fpt.png",
       start: "2021",
@@ -135,7 +144,7 @@ export const DATA = {
         "ABP Framework",
         "Next.js",
         "Angular",
-        "Typescript",
+        "TypeScript",
         "MS SQL Server",
         "TailwindCSS",
         "Bootstrap 5",
@@ -150,7 +159,6 @@ export const DATA = {
       ],
       image: "/vietravel_plus.png",
       video:
-        // "https://res.cloudinary.com/dio8ni9dk/video/upload/v1738948834/rhsdcnyvvvujhhsjiu6l.mp4",
         "",
     },
     {
@@ -163,7 +171,7 @@ export const DATA = {
       technologies: [
         "React",
         "Vite",
-        "Typescript",
+        "TypeScript",
         "TailwindCSS",
         "SynxtaxUI",
       ],
@@ -186,7 +194,7 @@ export const DATA = {
         "An event ticket management project for event organizers and participants.",
       technologies: [
         "Next.js",
-        "Typescript",
+        "TypeScript",
         "TailwindCSS",
         "NextUI",
         "axios",
@@ -204,8 +212,8 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
-      video: "https://res.cloudinary.com/dio8ni9dk/video/upload/v1738950125/gdtmubb92y3acoem4atw.mp4",
+      image: "/donace.png",
+      video: "",
     },
     {
       title: "Story Reading",
@@ -216,7 +224,7 @@ export const DATA = {
         "A reading website for all ages, offering advanced features for users.",
       technologies: [
         "React",
-        "Typescript",
+        "TypeScript",
         "TailwindCSS",
         "DaisyUI",
         "axios",
@@ -234,9 +242,9 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         }
       ],
-      image: "",
+      image: "/story.png",
       video:
-        "https://res.cloudinary.com/dio8ni9dk/video/upload/v1738950023/m2m6gifgxi81szcqjcxl.mp4",
+        "",
     },
   ],
   hackathons: [

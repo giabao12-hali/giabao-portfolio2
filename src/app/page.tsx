@@ -122,7 +122,7 @@ export default function Page() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  My Projects
+                  Projects
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   Check out my latest work
@@ -168,7 +168,7 @@ export default function Page() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   I like building things
                 </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">During my professional journey, I participated in {DATA.hackathons.length} hackathons. These events brought together passionate individuals from across the country to build meaningful projects in just 2–3 days. It was inspiring to witness how quickly ideas could become reality when driven by collaboration, curiosity, and purpose.</p>
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">Throughout my professional journey, I&apos;ve actively contributed to a range of technical events and initiatives — from building projects in intense sprint-like environments to providing technical support, system automation, and cross-functional collaboration. These experiences have deepened my adaptability and problem-solving mindset, and reaffirmed how much impact a dedicated team can make when technology meets purpose.</p>
               </div>
             </div>
           </BlurFade>
