@@ -148,9 +148,10 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "",
+      image: "/vietravel_plus.png",
       video:
-        "https://res.cloudinary.com/dio8ni9dk/video/upload/v1738948834/rhsdcnyvvvujhhsjiu6l.mp4",
+        // "https://res.cloudinary.com/dio8ni9dk/video/upload/v1738948834/rhsdcnyvvvujhhsjiu6l.mp4",
+        "",
     },
     {
       title: "Birthday Voucher",
@@ -172,11 +173,6 @@ export const DATA = {
           href: "https://birthday.hivietravel.vn",
           icon: <Icons.globe className="size-3" />,
         },
-        // {
-        //   type: "Source",
-        //   href: "https://github.com/magicuidesign/magicui",
-        //   icon: <Icons.github className="size-3" />,
-        // },
       ],
       image: "",
       video: "https://res.cloudinary.com/dio8ni9dk/video/upload/v1738949443/elcebfz1u8aks3e36g8x.mp4",
@@ -244,6 +240,27 @@ export const DATA = {
     },
   ],
   hackathons: [
+    {
+      title: "Vesak 2025",
+      dates: "May 2025 - May 2025",
+      location: "Vietnam National Pagoda, Ho Chi Minh City",
+      description:
+        "Implemented workflow automation using n8n to manage attendee data and logistics during the Vesak 2025 celebration. Built flows to auto-update information, add new entries, and send email notifications to international delegates. Also provided technical support for Wi-Fi/network stability and hardware troubleshooting throughout the event.",
+      image: "/vesak.jpg",
+      mlh: "",
+      links: [],
+    },
+    {
+      title: "Mammothon - Celestia Hackathon",
+      dates: "February 2025 - February 2025",
+      location: "FPT Polytechnic Collage",
+      description:
+        "Built and optimized the frontend of a Celestia Mammothon hackathon project using Next.js. Focused on UI implementation, performance tuning, and expanding skills in modern frontend development within a collaborative team environment.",
+      image:
+        "/bg.png",
+      mlh: "",
+      links: [],
+    },
     {
       title: "Game Việt Hackathon",
       dates: "Jun 06, 2023 - Sep 20, 2023",
