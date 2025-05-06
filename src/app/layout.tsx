@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
+import ClickSpark from "@/components/ui/click-spark";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     description: DATA.description,
     url: DATA.url,
     siteName: `${DATA.name}`,
-    locale: "en_US",
+    locale: "vi_VN",
     type: "website",
   },
   robots: {
@@ -56,9 +57,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-      <meta name="apple-mobile-web-app-title" content="Gia Bao Portfolio" />
-      <meta name="description" content={DATA.description} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="apple-mobile-web-app-title" content="Gia Bao Portfolio" />
+        <meta name="description" content={DATA.description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body
         className={cn(
@@ -68,8 +69,16 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
-            {children}
-            <Navbar />
+            <ClickSpark
+              sparkColor="#000000"
+              sparkSize={10}
+              sparkRadius={15}
+              sparkCount={8}
+              duration={400}
+            >
+              {children}
+              <Navbar />
+            </ClickSpark>
           </TooltipProvider>
         </ThemeProvider>
       </body>

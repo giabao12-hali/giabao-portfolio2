@@ -4,21 +4,20 @@ import { HomeIcon } from "lucide-react";
 export const DATA = {
   name: "GiaBao",
   initials: "DV",
-  url: "https://dillion.io",
+  url: "https://giabao-portfolio2.vercel.app",
   location: "Ho Chi Minh City, Vietnam",
   locationLink: "https://maps.app.goo.gl/B74bgAcgCRVFgJDH8",
   description:
-    "Fullstack Web Developer. I really enjoy exploring technologies and listening to all the sounds of life.",
+    "Fullstack Website Developer. I really enjoy exploring technologies and listening to all the sounds of life.",
   summary:
     "After completing my thesis defense in December 2023 with a project on event ticket sales and graduating in May 2024, I spent a significant amount of time researching modern web technologies. During this period, I also participated in several activities and connected with experienced developers in the field to learn new things in programming.",
   avatarUrl: "/me.jpg",
   skills: [
     "C#",
     "ASP.NET",
-    // "ABP Framework",
-    "React",
+    "ReactJS",
     "Next.js",
-    // "Angular",
+    "JavaScript",
     "TypeScript",
     "PostgreSQL",
     "MS SQL Server",
@@ -48,22 +47,19 @@ export const DATA = {
         name: "GitHub",
         url: "https://github.com/giabao12-hali",
         icon: Icons.github,
-
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/b%E1%BA%A3o-nguy%E1%BB%85n-4989a4305",
         icon: Icons.linkedin,
-
         navbar: true,
       },
       email: {
         name: "Send Email",
         url: "mailto:nguyenhiengiabao12@gmail.com",
         icon: Icons.email,
-
-        navbar: false,
+        navbar: true,
       },
       Discord: {
         name: "Discord",
@@ -100,7 +96,7 @@ export const DATA = {
         "Researching ABP Framework with .NET 8. Using Docker to deploy a modular architecture with ABP Framework, Client-side, and PostgreSQL. Learning and effectively utilizing ChatGPT for programming.",
     },
     {
-      company: "FPT Polytechnic",
+      company: "FPT Polytechnic Collage",
       href: "https://caodang.fpt.edu.vn",
       badges: [],
       location: "At Company",
@@ -122,7 +118,7 @@ export const DATA = {
       end: "Present",
     },
     {
-      school: "FPT Polytechnic",
+      school: "FPT Polytechnic Collage",
       href: "https://caodang.fpt.edu.vn",
       degree: "Good",
       logoUrl: "/fpt.png",
@@ -249,7 +245,7 @@ export const DATA = {
   ],
   hackathons: [
     {
-      title: "Vesak 2025",
+      title: "United Nations Vesak Festival 2025",
       dates: "May 2025 - May 2025",
       location: "Vietnam National Pagoda, Ho Chi Minh City",
       description:
