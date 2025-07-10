@@ -49,7 +49,7 @@ const BlurFade = ({
           duration,
           ease: "easeOut",
         }}
-        className={className}
+        className={`${className} list-none`}
       >
         {children}
       </motion.div>

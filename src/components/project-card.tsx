@@ -50,6 +50,7 @@ export function ProjectCard({
         href={href || "#"}
         className={cn("block cursor-pointer", className)}
         target="_blank"
+        aria-label="Project Link"
       >
         {video && (
           <video

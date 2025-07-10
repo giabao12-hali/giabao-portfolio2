@@ -72,6 +72,18 @@ export const DATA = {
 
   work: [
     {
+      company: "TripU",
+      href: "https://tripu.com.vn",
+      badges: [],
+      location: "At Company",
+      title: "Frontend Web Developer",
+      logoUrl: "/LogoTripU.png",
+      start: "May 2025",
+      end: "Present",
+      description:
+        "As a Frontend Developer at TripU, I focus on enhancing the digital booking experience for our self-guided travel services, including sightseeing tickets and SIM cards. I build and maintain responsive, user-centric interfaces using React and Next.js, ensuring performance, SEO optimization, and seamless accessibility across devices. I play a key role in the transition toward a direct-to-user booking model—allowing customers to book travel services directly on TripU’s platform without relying on third-party intermediaries. By collaborating closely with product designers and backend engineers, I contribute to delivering smooth user flows, dynamic form handling, and personalized service selection interfaces that reflect TripU’s commitment to digital transformation in the travel space.",
+    },
+    {
       company: "Vietravel",
       href: "https://www.vietravel.com",
       badges: [],
@@ -128,6 +140,53 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "TripU",
+      href: "https://tripu.com.vn",
+      dates: "May 2025 - Present",
+      active: true,
+      description:
+        "[TripU](https://tripu.com) is a travel-tech company specializing in tailor-made travel services, empowering independent travelers with customizable trip packages designed to meet every unique customer need. We aim to deliver experiences that are free-spirited, exciting, safe, and reliable. With the mission to become Vietnam's leading Online Travel Agency (OTA)",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "SCSS",
+        "Material UI",
+        "Docker",
+        "custom-hooks",
+        "zustand",
+        "redux",
+        "react-query"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://tripu.com.vn",
+          icon: <Icons.globe className="size-3" />,
+        }
+      ],
+      image: "/tripu.png",
+      video: "",
+    },
+    {
+      title: "ChatGPT Clone",
+      href: "",
+      dates: "April 2025 - Present",
+      active: true,
+      description:
+        "A custom AI chatbot platform designed for internal company use, enabling employees to enrich the chatbot with business-specific, travel-related, and proprietary company data. This system allows users to both train the chatbot with tailored knowledge and verify the information it has learned through an intuitive feedback mechanism.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "TailwindCSS",
+        "Shadcn UI",
+        "OpenAI API",
+        "Docker",
+      ],
+      links: [],
+      image: "/chatbot.png",
+      video: "",
+    },
+    {
       title: "Vietravel Plus",
       href: "https://vietravelplus.com",
       dates: "Dec 2024 - Present (Maintaince)",
@@ -145,6 +204,7 @@ export const DATA = {
         "TailwindCSS",
         "Bootstrap 5",
         "Shadcn UI",
+        "Docker"
       ],
       links: [
         {
@@ -157,30 +217,7 @@ export const DATA = {
       video:
         "",
     },
-    {
-      title: "Birthday Voucher",
-      href: "https://birthday.hivietravel.vn",
-      dates: "Dec 2024 - Dec 2024",
-      active: true,
-      description:
-        "It's a simple website (as requested by the leader) that includes terms and conditions for using the birthday voucher gifted by Vietravel to customers.",
-      technologies: [
-        "React",
-        "Vite",
-        "TypeScript",
-        "TailwindCSS",
-        "SynxtaxUI",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://birthday.hivietravel.vn",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "https://res.cloudinary.com/dio8ni9dk/video/upload/v1738949443/elcebfz1u8aks3e36g8x.mp4",
-    },
+
     {
       title: "Donace",
       href: "https://donace-fe-production.vercel.app",
@@ -210,37 +247,6 @@ export const DATA = {
       ],
       image: "/donace.png",
       video: "",
-    },
-    {
-      title: "Story Reading",
-      href: "https://story-reading.vercel.app",
-      dates: "January 2024 - February 2024",
-      active: true,
-      description:
-        "A reading website for all ages, offering advanced features for users.",
-      technologies: [
-        "React",
-        "TypeScript",
-        "TailwindCSS",
-        "DaisyUI",
-        "axios",
-        "react-router-dom",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://story-reading.vercel.app",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/TranDat1114/Story-Reading",
-          icon: <Icons.github className="size-3" />,
-        }
-      ],
-      image: "/story.png",
-      video:
-        "",
     },
   ],
   hackathons: [
