@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion, Variants } from "framer-motion";
+import { HTMLAttributes } from "react";
 import { useMemo } from "react";
 
 interface BlurFadeTextProps {
