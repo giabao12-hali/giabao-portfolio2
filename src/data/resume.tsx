@@ -168,25 +168,6 @@ export const DATA = {
       video: "",
     },
     {
-      title: "ChatGPT Clone",
-      href: "",
-      dates: "April 2025 - Present",
-      active: true,
-      description:
-        "A custom AI chatbot platform designed for internal company use, enabling employees to enrich the chatbot with business-specific, travel-related, and proprietary company data. This system allows users to both train the chatbot with tailored knowledge and verify the information it has learned through an intuitive feedback mechanism.",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "TailwindCSS",
-        "Shadcn UI",
-        "OpenAI API",
-        "Docker",
-      ],
-      links: [],
-      image: "/chatbot.png",
-      video: "",
-    },
-    {
       title: "Vietravel Plus",
       href: "https://vietravelplus.com",
       dates: "Dec 2024 - Present (Maintaince)",
@@ -217,7 +198,31 @@ export const DATA = {
       video:
         "",
     },
-
+    {
+      title: "Travel Guide",
+      href: "https://travel-guide-kappa.vercel.app",
+      dates: "August 2025 - September 2025",
+      active: true,
+      description:
+        "Travel Guide is a web application designed to provide users with comprehensive travel information and recommendations. The platform offers features such as destination guides, itineraries, local attractions, dining options, and user reviews to help travelers plan their trips effectively.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "TailwindCSS",
+        "Shadcn UI",
+        "zustand",
+        "Vercel",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://travel-guide-kappa.vercel.app",
+          icon: <Icons.globe className="size-3" />,
+        }
+      ],
+      image: "/travel-guide-image.png",
+      video: "",
+    },
     {
       title: "Donace",
       href: "https://donace-fe-production.vercel.app",
@@ -250,6 +255,22 @@ export const DATA = {
     },
   ],
   hackathons: [
+    {
+      title: "Startup GenZ - Ý Tưởng Nhỏ, Bức Phá Lớn",
+      dates: "August 2025 - September 2025",
+      location: "Vietravel Tower, Ho Chi Minh City",
+      description:
+        "Served as Project Manager & Tech Lead, responsible for UI/UX design and frontend development of the Travel Guide web app (mobile-simulated). Led project coordination, defined technical direction, and built a clean, scalable codebase to deliver a modern, intuitive travel experience.",
+      image: "/travel-guide.png",
+      mlh: "",
+      links: [
+        {
+          icon: <Icons.globe className="size-3" />,
+          title: "Travel Guide",
+          href: "https://travel-guide-kappa.vercel.app/"
+        }
+      ]
+    },
     {
       title: "United Nations Vesak Festival 2025",
       dates: "May 2025 - May 2025",
