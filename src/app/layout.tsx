@@ -17,6 +17,22 @@ export const metadata: Metadata = {
   title: `Hi, This is ${DATA.name}`,
   description: `${DATA.description}`,
   keywords: ["Gia Bao", "Portfolio", "Web Developer", "Frontend Developer", "Fullstack Developer", "Frontend Engineer", "Fullstack Engineer", "Software Engineer", "Software Developer", "React", "Next.js", "JavaScript", "TypeScript", "SCSS", "CSS", "HTML", "Web Design", "Web Development", "UI/UX", "User Interface", "User Experience", "Responsive Design", "Cross-Browser Compatibility", "Performance Optimization", "Accessibility", "SEO", "Agile", "Scrum", "Git", "Version Control"],
+  manifest: "/manifest.json",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+  ],
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Gia Bao Portfolio",
+  },
   openGraph: {
     title: `Hi, This is ${DATA.name}`,
     description: `So glad to see you here! I'm ${DATA.name}, a passionate web developer with a focus on creating engaging and user-friendly web applications. Explore my portfolio to see my work and learn more about my skills.`,
@@ -71,9 +87,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="apple-touch-icon" href="/web-app-manifest-192x192.png" />
         <meta name="apple-mobile-web-app-title" content="Gia Bao Portfolio" />
-        <meta name="description" content={DATA.description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
       </head>
       <body
         className={cn(
