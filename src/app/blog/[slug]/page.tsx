@@ -1,4 +1,4 @@
-import { getBlogPosts, getPost } from "@/data/blog";
+import { getBlogPosts, getBlogPost } from "@/data/blog-db";
 import { DATA } from "@/data/resume";
 import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
 export async function generateStaticParams() {
-  const posts = await getBlogPosts();
+  const { posts } = await getBlogPosts();
   return posts.map((post) => ({ slug: post.slug }));
 }
 
@@ -17,24 +17,28 @@ export async function generateMetadata({
     slug: string;
   };
 }): Promise<Metadata | undefined> {
-  let post = await getPost(params.slug);
+  let post = await getBlogPost(params.slug);
+
+  if (!post) {
+    return;
+  }
 
   let {
     title,
     publishedAt: publishedTime,
     summary: description,
     image,
-  } = post.metadata;
+  } = post;
   let ogImage = image ? `${DATA.url}${image}` : `${DATA.url}/og?title=${title}`;
 
   return {
     title,
-    description,
+    description: description || undefined,
     openGraph: {
       title,
-      description,
+      description: description || undefined,
       type: "article",
-      publishedTime,
+      publishedTime: publishedTime?.toISOString(),
       url: `${DATA.url}/blog/${post.slug}`,
       images: [
         {
@@ -45,7 +49,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title,
-      description,
+      description: description || undefined,
       images: [ogImage],
     },
   };
@@ -58,7 +62,7 @@ export default async function Blog({
     slug: string;
   };
 }) {
-  let post = await getPost(params.slug);
+  let post = await getBlogPost(params.slug);
 
   if (!post) {
     notFound();
@@ -73,34 +77,49 @@ export default async function Blog({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            headline: post.metadata.title,
-            datePublished: post.metadata.publishedAt,
-            dateModified: post.metadata.publishedAt,
-            description: post.metadata.summary,
-            image: post.metadata.image
-              ? `${DATA.url}${post.metadata.image}`
-              : `${DATA.url}/og?title=${post.metadata.title}`,
+            headline: post.title,
+            datePublished: post.publishedAt?.toISOString(),
+            dateModified: post.updatedAt.toISOString(),
+            description: post.summary,
+            image: post.image
+              ? `${DATA.url}${post.image}`
+              : `${DATA.url}/og?title=${post.title}`,
             url: `${DATA.url}/blog/${post.slug}`,
             author: {
               "@type": "Person",
-              name: DATA.name,
+              name: post.author.name || post.author.email,
             },
           }),
         }}
       />
       <h1 className="title font-medium text-2xl tracking-tighter max-w-[650px]">
-        {post.metadata.title}
+        {post.title}
       </h1>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm max-w-[650px]">
         <Suspense fallback={<p className="h-5" />}>
           <p className="text-sm text-neutral-600 dark:text-neutral-400">
-            {formatDate(post.metadata.publishedAt)}
+            {formatDate(post.publishedAt ? post.publishedAt.toISOString() : post.createdAt.toISOString())}
           </p>
         </Suspense>
       </div>
+      
+      {/* Categories and Tags */}
+      <div className="flex flex-wrap gap-2 mb-8 max-w-[650px]">
+        {post.categories.map(({ category }) => (
+          <span key={category.id} className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+            {category.name}
+          </span>
+        ))}
+        {post.tags.map(({ tag }) => (
+          <span key={tag.id} className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200">
+            #{tag.name}
+          </span>
+        ))}
+      </div>
+
       <article
         className="prose dark:prose-invert"
-        dangerouslySetInnerHTML={{ __html: post.source }}
+        dangerouslySetInnerHTML={{ __html: post.content }}
       ></article>
     </section>
   );

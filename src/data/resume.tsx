@@ -66,6 +66,12 @@ export const DATA = {
         url: "https://discordapp.com/users/494207238542589962",
         icon: Icons.discord,
         navbar: false,
+      },
+      Blog: {
+        name: "My blog",
+        url: "/blog",
+        icon: Icons.notion,
+        navbar: true,
       }
     },
   },

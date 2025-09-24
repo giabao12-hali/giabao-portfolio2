@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import ClickSpark from "@/components/ui/click-spark";
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -118,6 +119,7 @@ export default function RootLayout({
               {children}
               <Navbar />
             </ClickSpark>
+            <SmoothCursor/>
           </TooltipProvider>
         </ThemeProvider>
       </body>
