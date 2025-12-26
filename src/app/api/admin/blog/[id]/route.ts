@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 
+export const dynamic = 'force-dynamic'
+
 // GET /api/admin/blog/[id] - Get single post by ID (admin - includes unpublished)
 export async function GET(
   request: NextRequest,

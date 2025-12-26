@@ -2,6 +2,8 @@ import BlurFade from "@/components/magicui/blur-fade";
 import { getBlogPosts } from "@/data/blog-db";
 import Link from "next/link";
 
+export const dynamic = 'force-dynamic'
+
 export const metadata = {
   title: "Blog",
   description: "My thoughts on software development, life, and more.",

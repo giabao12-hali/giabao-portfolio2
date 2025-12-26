@@ -5,9 +5,12 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
+export const dynamic = 'force-dynamic'
+export const dynamicParams = true
+
 export async function generateStaticParams() {
-  const { posts } = await getBlogPosts();
-  return posts.map((post) => ({ slug: post.slug }));
+  // Return empty array to skip static generation at build time
+  return []
 }
 
 export async function generateMetadata({

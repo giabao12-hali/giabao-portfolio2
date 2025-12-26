@@ -85,7 +85,7 @@ export async function PUT(
     }
 
     // Update post with relations
-    await prisma.$transaction(async (tx) => {
+    await prisma.$transaction(async (tx: any) => {
       // Remove existing relations
       await tx.postCategory.deleteMany({ where: { postId: id } })
       await tx.postTag.deleteMany({ where: { postId: id } })

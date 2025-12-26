@@ -11,7 +11,7 @@ export const DATA = {
     "Fullstack Website Developer. I really enjoy exploring technologies and listening to all the sounds of life.",
   summary:
     "After completing my thesis defense in December 2023 with a project on event ticket sales and graduating in May 2024, I spent a significant amount of time researching modern web technologies. During this period, I also participated in several activities and connected with experienced developers in the field to learn new things in programming.",
-  avatarUrl: "/me.jpg",
+  avatarUrl: "/avatar2.jpg",
   skills: [
     "C#",
     "ASP.NET",
@@ -19,6 +19,9 @@ export const DATA = {
     "Next.js",
     "JavaScript",
     "TypeScript",
+    "Shadcn UI",
+    "TailwindCSS",
+    "SCSS",
     "PostgreSQL",
     "MS SQL Server",
     "Docker",
@@ -65,13 +68,13 @@ export const DATA = {
         name: "Discord",
         url: "https://discordapp.com/users/494207238542589962",
         icon: Icons.discord,
-        navbar: false,
+        navbar: true,
       },
       Blog: {
         name: "My blog",
         url: "/blog",
         icon: Icons.notion,
-        navbar: true,
+        navbar: false,
       }
     },
   },
@@ -85,7 +88,7 @@ export const DATA = {
       title: "Frontend Web Developer",
       logoUrl: "/LogoTripU.png",
       start: "May 2025",
-      end: "Present",
+      end: "November 2025 (On-site)",
       description:
         "As a Frontend Developer at TripU, I focus on enhancing the digital booking experience for our self-guided travel services, including sightseeing tickets and SIM cards. I build and maintain responsive, user-centric interfaces using React and Next.js, ensuring performance, SEO optimization, and seamless accessibility across devices. I play a key role in the transition toward a direct-to-user booking model—allowing customers to book travel services directly on TripU’s platform without relying on third-party intermediaries. By collaborating closely with product designers and backend engineers, I contribute to delivering smooth user flows, dynamic form handling, and personalized service selection interfaces that reflect TripU’s commitment to digital transformation in the travel space.",
     },
@@ -145,6 +148,32 @@ export const DATA = {
     },
   ],
   projects: [
+    {
+      title: "Travel.com.vn",
+      href: "https://travel.com.vn",
+      dates: "December 2025 - Present",
+      active: true,
+      description:
+        "This project focuses on restructuring and redesigning [Travel.com.vn](https://travel.com.vn) into a modern Online Travel Agency (OTA) platform, where searching and booking tours is intuitive, seamless, and accessible to users of all ages — from young explorers to families and middle-aged travelers. The website is reimagined with a user-first mindset, streamlining user flows and minimizing friction throughout the booking journey. The tour search and filtering system is clearly structured, allowing users to quickly access essential information such as destinations, travel dates, pricing, and included services within just a few interactions.,",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "SCSS",
+        "custom-hooks",
+        "zustand",
+        "redux",
+        "react-query"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://travel.com.vn",
+          icon: <Icons.globe className="size-3" />,
+        }
+      ],
+      image: "/travel-com-vn.png",
+      video: "",
+    },
     {
       title: "TripU",
       href: "https://tripu.com.vn",
