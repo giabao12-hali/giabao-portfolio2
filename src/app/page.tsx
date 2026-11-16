@@ -13,6 +13,7 @@ import { useEffect } from "react";
 import Markdown from "react-markdown";
 import Lenis from "lenis";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -24,6 +25,8 @@ const images = [
 ];
 
 export default function Page() {
+  const showCursor = useMediaQuery('(min-width: 768px)')
+
   useEffect(() => {
     const lenis = new Lenis();
     function raf(time: any) {
@@ -242,7 +245,7 @@ export default function Page() {
           </div>
         </section>
       </main>
-      <SmoothCursor />
+      {showCursor && <SmoothCursor />}
     </>
   );
 }

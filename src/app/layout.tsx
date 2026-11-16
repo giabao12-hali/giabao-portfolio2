@@ -157,7 +157,6 @@ export default function RootLayout({
               {children}
               <Navbar />
             </ClickSpark>
-            <SmoothCursor/>
           </TooltipProvider>
         </ThemeProvider>
       </body>
