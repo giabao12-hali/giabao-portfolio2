@@ -3,30 +3,39 @@ import { HomeIcon } from "lucide-react";
 
 export const DATA = {
   name: "GiaBao",
-  initials: "DV",
+  fullName: "Nguyen Hien Gia Bao",
+  initials: "GB",
   url: "https://giabao-portfolio2.vercel.app",
   location: "Ho Chi Minh City, Vietnam",
   locationLink: "https://maps.app.goo.gl/B74bgAcgCRVFgJDH8",
   description:
-    "Fullstack Website Developer. I really enjoy exploring technologies and listening to all the sounds of life.",
+    "Fullstack Web Developer at Vietravel building travel platforms with Next.js, TypeScript and .NET, from AI trip planning to booking experiences.",
   summary:
-    "After completing my thesis defense in December 2023 with a project on event ticket sales and graduating in May 2024, I spent a significant amount of time researching modern web technologies. During this period, I also participated in several activities and connected with experienced developers in the field to learn new things in programming.",
+    "I'm a Fullstack Web Developer at Vietravel with 2 years of experience building travel platforms, membership portals and booking experiences with Next.js, React, TypeScript and .NET. Recently I've worked on AI-powered trip planning with Google Maps, third-party ticketing integrations and admin dashboards. I'm also studying Artificial Intelligence at VNUHCM - University of Technology.",
   avatarUrl: "/avatar2.jpg",
   skills: [
-    "C#",
-    "ASP.NET",
-    "ReactJS",
     "Next.js",
-    "JavaScript",
+    "ReactJS",
     "TypeScript",
-    "Shadcn UI",
     "TailwindCSS",
+    "Shadcn UI",
     "SCSS",
+    "TanStack Query",
+    "C#",
+    ".NET",
+    "ASP.NET",
+    "ABP Framework",
+    "Google Maps API",
     "PostgreSQL",
     "MS SQL Server",
     "Docker",
-    "n8n"
+    "n8n",
   ],
+  languages: [
+    { name: "English", level: "Intermediate" },
+    { name: "Vietnamese", level: "Fluent" },
+  ],
+  resumeUrl: "/NGUYEN_HIEN_GIA_BAO_cv.pdf",
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
   ],
@@ -81,18 +90,6 @@ export const DATA = {
 
   work: [
     {
-      company: "TripU",
-      href: "https://tripu.com.vn",
-      badges: [],
-      location: "At Company",
-      title: "Frontend Web Developer",
-      logoUrl: "/LogoTripU.png",
-      start: "May 2025",
-      end: "November 2025 (On-site)",
-      description:
-        "As a Frontend Developer at TripU, I focus on enhancing the digital booking experience for our self-guided travel services, including sightseeing tickets and SIM cards. I build and maintain responsive, user-centric interfaces using React and Next.js, ensuring performance, SEO optimization, and seamless accessibility across devices. I play a key role in the transition toward a direct-to-user booking model—allowing customers to book travel services directly on TripU’s platform without relying on third-party intermediaries. By collaborating closely with product designers and backend engineers, I contribute to delivering smooth user flows, dynamic form handling, and personalized service selection interfaces that reflect TripU’s commitment to digital transformation in the travel space.",
-    },
-    {
       company: "Vietravel",
       href: "https://www.vietravel.com",
       badges: [],
@@ -102,7 +99,7 @@ export const DATA = {
       start: "September 2024",
       end: "Present",
       description:
-        "In my role, I work with React and Next.js to design user-focused interfaces while ensuring SEO optimization for newly developed websites. I collaborate with cross-functional teams to maintain and extend the company’s systems built on .NET, and utilize Docker to streamline service deployment and performance. Alongside core development tasks, I also support internal tooling efforts, including building and maintaining an admin dashboard using Angular and the ABP Framework. Additionally, I contribute to backend development by building APIs that facilitate system migration and modernization.",
+        "Developed and maintained travel platforms, membership portals, booking experiences and internal admin dashboards using Next.js, React and TypeScript. Implemented authentication, profile management, membership benefits and reward features; integrated third-party travel services and backend APIs for product discovery and booking. Built AI-powered travel planning experiences with personalized itineraries and Google Maps visualization, plus admin dashboards for content management, customer inquiries and usage reporting. Developed backend APIs with C#/.NET, and improved SEO, performance and UX in collaboration with business teams.",
     },
     {
       company: "HQSOFT - Distribution & Retail Expert",
@@ -131,23 +128,95 @@ export const DATA = {
   ],
   education: [
     {
-      school: "University of Information Technology - UIT",
+      school: "VNUHCM - University of Technology",
       href: "https://www.uit.edu.vn",
-      degree: "Good",
+      degree: "Bachelor - Artificial Intelligence",
       logoUrl: "/uit.png",
-      start: "2025",
+      start: "March 2026",
       end: "Present",
     },
     {
-      school: "FPT Polytechnic Collage",
+      school: "FPT Polytechnic",
       href: "https://caodang.fpt.edu.vn",
-      degree: "Good",
+      degree: "College - Information Technology - Software Development",
       logoUrl: "/fpt.png",
-      start: "2021",
-      end: "2024",
+      start: "August 2021",
+      end: "December 2023",
     },
   ],
   projects: [
+    {
+      title: "Make Your Trip",
+      href: "",
+      dates: "March 2026 - September 2026",
+      active: true,
+      description:
+        "An AI-powered travel planning platform that generates personalized itineraries, visualizes trip locations on Google Maps, and integrates travel products for a seamless planning and booking experience. Integrated AI to generate itineraries from user preferences, embedded travel products into the planning flow, and built an admin dashboard to review conversations and visualize usage data.",
+      technologies: [
+        "C#",
+        ".NET 10",
+        "ASP.NET",
+        "Next.js",
+        "TypeScript",
+        "Google Maps API",
+        "ChatGPT 5.5",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://travel.com.vn/en/make-your-trip",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "GlobalTix",
+      href: "",
+      dates: "May 2026 - September 2026",
+      active: true,
+      description:
+        "A sightseeing ticket booking integration with GlobalTix, a third-party ticket provider, enabling users to browse attractions, select ticket options, and complete bookings. Integrated GlobalTix APIs for attraction details, ticket options and pricing, and developed the end-to-end booking flow with responsive interfaces.",
+      technologies: ["Next.js", "TypeScript", "SCSS"],
+      links: [
+        {
+          type: "Website",
+          href: "https://travel.com.vn/ota-service?tab=ve-tham-quan",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Vietravel Plus",
+      href: "https://vietravelplus.com",
+      dates: "December 2025 - February 2026",
+      active: true,
+      description:
+        "A membership portal for Vietravel customers to explore membership benefits and submit inquiries, with an admin dashboard for managing website content and responding to customer questions. **Role:** Fullstack Developer (solo). Built the member-facing website, inquiry workflows, the content-management dashboard and the backend APIs.",
+      technologies: [
+        "C#",
+        ".NET 8",
+        "ABP Framework",
+        "RESTful APIs",
+        "Next.js",
+        "TypeScript",
+        "TailwindCSS",
+        "TanStack Query",
+        "axios",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://vietravelplus.com",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/vietravel_plus.png",
+      video: "",
+    },
     {
       title: "Travel.com.vn",
       href: "https://travel.com.vn",
@@ -173,65 +242,6 @@ export const DATA = {
       ],
       image: "/travel-com-vn.png",
       video: "",
-    },
-    {
-      title: "TripU",
-      href: "https://tripu.com.vn",
-      dates: "May 2025 - Present",
-      active: true,
-      description:
-        "[TripU](https://tripu.com) is a travel-tech company specializing in tailor-made travel services, empowering independent travelers with customizable trip packages designed to meet every unique customer need. We aim to deliver experiences that are free-spirited, exciting, safe, and reliable. With the mission to become Vietnam's leading Online Travel Agency (OTA)",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "SCSS",
-        "Material UI",
-        "Docker",
-        "custom-hooks",
-        "zustand",
-        "redux",
-        "react-query"
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://tripu.com.vn",
-          icon: <Icons.globe className="size-3" />,
-        }
-      ],
-      image: "/tripu.png",
-      video: "",
-    },
-    {
-      title: "Vietravel Plus",
-      href: "https://vietravelplus.com",
-      dates: "Dec 2024 - Present (Maintaince)",
-      active: true,
-      description:
-        "After being assigned by the leader to revamp the [Vietravel Plus](https://vietravelplus.com) website—with exciting features and attractive benefits for registered members—I collaborated with the designer to build the Client-side while following the leader's guidance to implement the Server-side of the website.",
-      technologies: [
-        "C#",
-        "ASP.NET",
-        "ABP Framework",
-        "Next.js",
-        "Angular",
-        "TypeScript",
-        "MS SQL Server",
-        "TailwindCSS",
-        "Bootstrap 5",
-        "Shadcn UI",
-        "Docker"
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://vietravelplus.com",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "/vietravel_plus.png",
-      video:
-        "",
     },
     {
       title: "Travel Guide",

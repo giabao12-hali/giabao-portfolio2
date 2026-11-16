@@ -28,7 +28,7 @@ const OG_DESCRIPTION = `I'm ${DATA.name}, a fullstack web developer based in Ho 
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: `${DATA.name} | Fullstack Web Developer`,
+    default: `${DATA.fullName} | Fullstack Web Developer`,
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,
@@ -98,7 +98,8 @@ export const metadata: Metadata = {
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: DATA.name,
+  name: DATA.fullName,
+  alternateName: DATA.name,
   url: DATA.url,
   image: `${DATA.url}${DATA.avatarUrl}`,
   jobTitle: "Fullstack Web Developer",

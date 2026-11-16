@@ -25,7 +25,7 @@ const images = [
 ];
 
 export default function Page() {
-  const showCursor = useMediaQuery('(min-width: 768px)')
+  const showCursor = useMediaQuery('(min-width: 768px)', { initializeWithValue: false })
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -139,6 +139,20 @@ export default function Page() {
                 </BlurFade>
               ))}
             </div>
+            <div className="flex flex-wrap gap-x-4 gap-y-1 pt-2 text-sm text-muted-foreground">
+              {DATA.languages.map((lang) => (
+                <span key={lang.name}>
+                  <strong className="text-foreground">{lang.name}</strong>: {lang.level}
+                </span>
+              ))}
+            </div>
+            <a
+              href={DATA.resumeUrl}
+              download="NGUYEN_HIEN_GIA_BAO_cv.pdf"
+              className="mt-2 inline-flex w-fit items-center rounded-md bg-foreground px-3 py-1.5 text-sm text-background hover:opacity-90"
+            >
+              Download CV (PDF)
+            </a>
           </div>
         </section>
         <section id="projects">
