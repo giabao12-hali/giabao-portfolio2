@@ -3,7 +3,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import ClickSpark from "@/components/ui/click-spark";
@@ -14,44 +14,67 @@ const fontSans = FontSans({
   variable: "--font-sans",
 });
 
-export const metadata: Metadata = {
-  title: `Hi, This is ${DATA.name}`,
-  description: `${DATA.description}`,
-  keywords: ["Gia Bao", "Portfolio", "Web Developer", "Frontend Developer", "Fullstack Developer", "Frontend Engineer", "Fullstack Engineer", "Software Engineer", "Software Developer", "React", "Next.js", "JavaScript", "TypeScript", "SCSS", "CSS", "HTML", "Web Design", "Web Development", "UI/UX", "User Interface", "User Experience", "Responsive Design", "Cross-Browser Compatibility", "Performance Optimization", "Accessibility", "SEO", "Agile", "Scrum", "Git", "Version Control"],
-  manifest: "/manifest.json",
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
     { media: "(prefers-color-scheme: dark)", color: "#000000" },
   ],
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
+};
+
+const OG_DESCRIPTION = `I'm ${DATA.name}, a fullstack web developer based in Ho Chi Minh City. Explore my projects, experience and skills.`;
+
+export const metadata: Metadata = {
+  metadataBase: new URL(DATA.url),
+  title: {
+    default: `${DATA.name} | Fullstack Web Developer`,
+    template: `%s | ${DATA.name}`,
   },
+  description: DATA.description,
+  keywords: [
+    "Gia Bao",
+    "Portfolio",
+    "Fullstack Developer",
+    "Web Developer",
+    "Frontend Developer",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "ASP.NET",
+    "Ho Chi Minh City",
+    "Vietnam",
+  ],
+  authors: [{ name: DATA.name, url: DATA.url }],
+  creator: DATA.name,
+  manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
     title: "Gia Bao Portfolio",
   },
   openGraph: {
-    title: `Hi, This is ${DATA.name}`,
-    description: `So glad to see you here! I'm ${DATA.name}, a passionate web developer with a focus on creating engaging and user-friendly web applications. Explore my portfolio to see my work and learn more about my skills.`,
-    url: `${DATA.url}`,
+    title: `${DATA.name} | Fullstack Web Developer`,
+    description: OG_DESCRIPTION,
+    url: DATA.url,
     type: "website",
-    siteName: `${DATA.name}`,
-    locale: "vi_VN",
+    siteName: DATA.name,
+    locale: "en_US",
     images: [
       {
-        url: "https://giabao-portfolio2.vercel.app/me.jpg",
-        width: 1200,
-        height: 630,
-        alt: `Hi, This is ${DATA.name}`,
-      }
-    ]
+        url: "/me.jpg",
+        alt: `${DATA.name} - Fullstack Web Developer`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${DATA.name} | Fullstack Web Developer`,
+    description: OG_DESCRIPTION,
+    images: ["/me.jpg"],
   },
   alternates: {
-    canonical: `${DATA.url}`,
+    canonical: "/",
   },
   robots: {
     index: true,
@@ -64,21 +87,32 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  category: "website",
-  other: {
-    "revisit-after": "7 days",
-    "distribution": "global",
-    "rating": "general",
-    "geo.region": "VN",
-    "geo.country": "Vietnam",
-  },
-  metadataBase: new URL(DATA.url),
+  category: "technology",
   formatDetection: {
-    email: true,
-    address: true,
-    telephone: true,
-  }
-}
+    email: false,
+    address: false,
+    telephone: false,
+  },
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: DATA.name,
+  url: DATA.url,
+  image: `${DATA.url}${DATA.avatarUrl}`,
+  jobTitle: "Fullstack Web Developer",
+  description: DATA.description,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Ho Chi Minh City",
+    addressCountry: "VN",
+  },
+  knowsAbout: DATA.skills,
+  sameAs: Object.values(DATA.contact.social)
+    .map((s) => s.url)
+    .filter((u) => u.startsWith("http")),
+};
 
 export default function RootLayout({
   children,
@@ -88,6 +122,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <link rel="apple-touch-icon" href="/web-app-manifest-192x192.png" />
         <meta name="apple-mobile-web-app-title" content="Gia Bao Portfolio" />
         <meta name="apple-mobile-web-app-capable" content="yes" />

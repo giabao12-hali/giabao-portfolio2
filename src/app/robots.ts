@@ -1,13 +1,13 @@
-import { MetadataRoute } from 'next'
-import React from 'react'
+import { MetadataRoute } from "next";
+import { DATA } from "@/data/resume";
 
 export default function robots(): MetadataRoute.Robots {
-    return {
-        rules: {
-            userAgent: "*",
-            allow: "/",
-            disallow: ["/api", "/admin", "/dashboard", "/auth", "/login", "/register"]
-        },
-        sitemap: "https://giabao-portfolio2.vercel.app/sitemap.xml",
-    }
+  return {
+    rules: {
+      userAgent: "*",
+      allow: "/",
+    },
+    sitemap: `${DATA.url}/sitemap.xml`,
+    host: DATA.url,
+  };
 }
